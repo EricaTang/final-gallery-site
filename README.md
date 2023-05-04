@@ -19,26 +19,27 @@ Explanation of some of my source code
   - $(window).on("load",function() {
 			$(".loader-wrapper").fadeOut("slow");
 		});
-        - This code is a jQuery script that listens to the "load" event on the window object
-        - which is triggered when all the resources of a webpage have finished loading.
-        - When the "load" event is fired, the script selects an element with the class "loader-wrapper"
-        - and then calls the fadeOut() method on it with the argument "slow"
-        - This method is used to gradually decrease the opacity of the selected element until it becomes completely transparent.
-        - Therefore, this code fades out the element with the class "loader-wrapper" slowly
-        - indicating to the user that the page has finished loading and it is now ready to be displayed.
+	- When all the content in the webpage finish loading, it select an element with the class "loader-wrapper", and then class the fadeOut() method. This method would make the elements gradually decrease in opacity until completely transparent. 
+  - @keyframes loader {
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(180deg);}
+	50% {transform: rotate(180deg);}
+	75% {transform: rotate(360deg);}
+	100% {transform: rotate(360deg);}
+}
+	- This is one of CSS codes I found interesting. It is bascially keyframing the motion of the loader and assign specific rotation angles.  
 
 Issues I encountered
-- The page loader - didn’t figure out how to make the duration longer if the content on the page loads really fast
+- The page loader
+  - I wanted to make the duration longer if the content on the page loads really fast
 - The modals
-  - Once I finished making two pop-up modals in the landing page, it flashes every time I refresh the page
-  - I used the loader to hide that flash but still didn’t figure out how to fix that
+  - Once I finished making two pop-up modals in the landing page, it flashes every time I refresh the page. I used the loader to hide that flash but still didn’t figure out how to fix that. 
 - Media queries were time-consuming
-- The content in the div on the home page exceeds the boundaries of the body
-  - I couldn’t fix that by making HTML & body 100% height
-  - I end up figuring out that it is my image added to the background that caused this, so I changed to directly set it as the background image in CSS instead of inserting an image inside a wrapper div in HTML.
+- Content in divs exceeds the body
+  - I couldn’t fix that by making HTML & body's height = 100%. But I end up resolving this issue by directly setting the image as the background image in CSS instead of inserting an image inside a wrapper div in HTML.
 
 What I learned in order to accomplish my project
-- More familiar with HTML & CSS
+- More HTML & CSS
 - Some JavaScript
 - Html forms
 - Pop-up modal
@@ -48,3 +49,4 @@ Next steps
 - GreenSock animation
 - More JavaScript – create smooth scrolling and cooler hovering effects
 - A more complicated landing/ loading animation
+- etc.
