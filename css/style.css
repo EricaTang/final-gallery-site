@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Russo+One&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Russo One', sans-serif;
+	font-size: 45px;
+	text-transform: uppercase;
+}
+
+.loader-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+}
+
+.loader {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	border: 6px solid red;
+	animation: loader 2s infinite ease;
+}
+
+@keyframes loader {
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(180deg);}
+	50% {transform: rotate(180deg);}
+	75% {transform: rotate(360deg);}
+	100% {transform: rotate(360deg);}
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+
+.img-container {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+}
+
+.img-container img {
+	width: 100%;
+	height: 100%;
+}
+
+.site-nav {
+	position: absolute;
+	background: transparent;
+	padding: 4em;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	z-index: 2;
+}
+
+.site-nav .logo {
+	color: white;
+}
+
+.site-nav-2 {
+	bottom: 0;
+	position: absolute;
+	background: transparent;
+	padding: 4em;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	z-index: 2;
+}
+
+.container a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.container a:hover {
+	cursor: pointer;
+	color: red;
+}
+
+.infoModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+}
+
+.infoModal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.infoModal > div {
+    width: 40vw;
+    height: 65vh;
+    position: relative;
+    margin: 10% auto;
+    padding: 60px;
+    background-color: dimgray;
+    background-image: url(../img/about.png);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.infoModal p {
+	font-size: 20px;
+}
+
+.infoModal p.bigger {
+	font-size: 30px;
+}
+
+.close {
+    height: 20px;
+    width: 20px;
+    color: black;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.infoModal2 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+}
+
+.infoModal2:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.infoModal2 > div {
+	font-size: 35px;
+    width: 40vw;
+    height: 70vh;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px;
+    line-height: 40px;
+    background-color: dimgray;
+    background-image: url(../img/about.png);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.infoModal2 form {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.infoModal2 fieldset {
+	border: 2px solid white;
+	padding: 20px;
+}
+
+.infoModal2 p {
+	font-size: 35px;
+}
+
+.infoModal2 label {
+	font-size: 20px;
+}
+
+.infoModal2 input {
+	font-size: 35px;
+	background:transparent;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-left: 5px solid black;
+	padding: 5px;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.infoModal2 .submit input {
+	font-size: 17px;
+	color: white;
+	background-color: black;
+	padding: 7px;
+}
+
+.infoModal2 .submit input:hover {
+	color: red;
+	cursor: pointer;
+}
+
+@media(max-width: 900px) {
+	.sidebar-nav {
+		display: none;
+	}
+
+	.site-content {
+		width: 100vw;
+		left: 0;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	* {
+		font-size: 20px;
+	}
+
+	.infoModal2 > div {
+		line-height: 30px;
+	}
+
+	.infoModal2 p {
+		font-size: 18px;
+	}
+
+	.infoModal2 label {
+		font-size: 10px;
+	}
+
+	.infoModal2 input {
+		font-size: 15px;
+	}
+
+	.infoModal2 .submit input {
+		font-size: 10px;
+	}
+
+	.site-nav, .site-nav-2 {
+		padding: 4.5rem;
+	}
+
+	.infoModal > div, .infoModal2 > div {
+		width: 55vw;
+		height: 45vh;
+		margin: 55% auto;
+		padding: 30px;
+	}
+
+	.infoModal p {
+		font-size: 15px;
+	}
+
+	.infoModal p.bigger {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	* {
+		font-size: 35px;
+	}
+
+	.infoModal2 p {
+		font-size: 30px;
+	}
+
+	.infoModal2 label {
+		font-size: 15px;
+	}
+
+	.infoModal2 input {
+		font-size: 25px;
+	}
+
+	.infoModal2 .submit input {
+		font-size: 15px;
+	}
+
+	.infoModal > div, .infoModal2 > div {
+		width: 50vw;
+		height: 50vh;
+		margin: 35% auto;
+	}
+
+	.infoModal p {
+		font-size: 20px;
+	}
+
+	.infoModal p.bigger {
+		font-size: 25px;
+	}
+}

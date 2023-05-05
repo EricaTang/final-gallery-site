@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Russo+One&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.loader-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+}
+
+.loader {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	border: 6px solid red;
+	animation: loader 2s infinite ease;
+}
+
+@keyframes loader {
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(180deg);}
+	50% {transform: rotate(180deg);}
+	75% {transform: rotate(360deg);}
+	100% {transform: rotate(360deg);}
+}
+
+.site-nav {
+	position: fixed;
+	font-family: 'Russo One', sans-serif;
+	font-size: 30px;
+	position: absolute;
+	position: fixed;
+	background-color: green;
+	background: transparent;
+	padding: 1em 3em;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	z-index: 4;
+	font-family: 'Russo One', sans-serif;
+}
+
+.site-nav a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+}
+
+.site-nav a:hover {
+	color: red;
+}
+
+.site-nav p {
+	text-transform: uppercase;
+	color: white;
+	font-size: 45px;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 5%;
+}
+
+.swiper {
+	border-radius: 50%;
+	border: 1.5px solid white;
+	width: 38%;
+	height: fit-content;
+}
+
+.swiper-slide img {
+	width: 100%;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+	color: red;
+}
+
+:root {
+    --swiper-navigation-size: 60px;
+}
+
+.swiper .swiper-pagination-bullet-active {
+	background: red;
+}
+
+.wrapper{
+	background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 5% 5% 5%;
+}
+
+.wrapper .description {
+	padding: 0px 10% 5% 10%;
+}
+
+.wrapper p {
+	color: white;
+	font-size: 30px;
+	font-family: 'Russo One', sans-serif;
+}
+
+.wrapper .box{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+
+.wrapper .box .dream{
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.wrapper .box .dream img{
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.site-nav {
+		font-size: 17px;
+	}
+
+	.site-nav p {
+		font-size: 17px;
+	}
+
+	.swiper {
+		width: 80%;
+	}
+
+	.wrapper p {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.site-nav {
+		font-size: 30px;
+	}
+
+	.site-nav p {
+		font-size: 30px;
+	}
+
+	.swiper {
+		width: 70%;
+	}
+
+	.wrapper p {
+		font-size: 25px;
+	}
+
+	.container .box{
+		flex-direction: column;
+  }
+
+  .container .box .dream{
+  	width: 100%;
+  }
+}

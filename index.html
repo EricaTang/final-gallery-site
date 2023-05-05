@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>gallery</title>
+	<script src="jquery-3.6.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<!-- the loader -->
+	<div class="loader-wrapper">
+		<span class="loader"></span>
+	</div>
+
+	<!-- main content -->
+	<div class="container">
+		<div class="img-container">
+			<img src="img/bg.png">
+		</div>
+
+		<div class="site-nav">
+			<div class="logo"><p>D E 0 3</p></div>
+			<div class="about"><a href="#info">About.</a></div>	
+		</div>
+
+		<div class="site-nav-2">
+			<div class="contact"><a href="#info2">Contact.</a></div>
+			<div class="enter"><a href="main.html">Enter.</a></div>	
+		</div>
+
+		<div id="info" class="infoModal">
+			<div>
+				<a href="#close" title="close" class="close">X</a>
+				<p>Hey!:)</p>
+				<p>I love</p>
+				<p>capturing moments & expressing myself</p>
+				<p>through photography</p>
+				<p>-</p>
+				<p>Welcome to my</p>
+				<p class="bigger">DE03 photo gallery</p>
+			</div>
+		</div>
+
+		<div id="info2" class="infoModal2">
+			<div>
+				<a href="#close" title="close" class="close">X</a>
+				<form
+				action="create-profile.js"
+				name="user-create"
+				target="_self"
+				method="GET"
+				>
+					<p>Contact Me:</p>
+					<label for="FirstName">First Name:</label>
+					<input type="text" name="FirstName">
+					<label for="LastName">Last Name:</label>
+					<input type="text" name="LastName">
+					<label for="Email">Email:   </label>
+					<input type="text" name="Email">
+					<label for="Message">Leave Your Message Here:</label>
+					<input type="text" name="Message">
+					<div class="submit">
+						<input type="button" value="submit." name="submit-profile" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- the script for the loader -->
+	<script>
+		$(window).on("load",function() {
+			$(".loader-wrapper").fadeOut("slow");
+		});
+	</script>
+</body>
+</html>

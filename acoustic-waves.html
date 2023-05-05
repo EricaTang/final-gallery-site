@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Acoustic Waves</title>
+	<script src="jquery-3.6.4.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/offbeat.css">
+</head>
+<body>
+	<div class="loader-wrapper">
+		<span class="loader"></span>
+	</div>
+
+	<div class="site-nav">
+		<div class="logo"><a href="index.html">D E 0 3</a></div>
+		<p>「Acoustic Waves」</p>
+		<div class="about"><a href="main.html">Back.</a></div>	
+	</div>
+
+	<div class="container">
+		<!-- Slider main container -->
+		<div class="swiper">
+ 			<!-- Additional required wrapper -->
+  			<div class="swiper-wrapper">
+    			<!-- Slides -->
+    			<div class="swiper-slide"><img src="img/aco/3.png"></div>
+    			<div class="swiper-slide"><img src="img/aco/1.png"></div>
+    			<div class="swiper-slide"><img src="img/aco/5.png"></div>
+    			<div class="swiper-slide"><img src="img/aco/8.png"></div>
+    			<div class="swiper-slide"><img src="img/aco/2.png"></div>
+  			</div>
+  			<!-- If we need pagination -->
+  			<div class="swiper-pagination"></div>
+
+  			<!-- If we need navigation buttons -->
+  			<div class="swiper-button-prev"></div>
+  			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="description">
+			<p>"Acoustic Waves" is a photo collection that captures the vibe and emotion of live concerts. Each image allows me to relive the powerful vibrations of the music and immerse myself in the atmosphere of the moment.</p>
+			<p>-</p>
+		</div>
+
+		<div class="box">
+            <div class="dream">
+            	<img src="img/aco/1.png">
+            	<img src="img/aco/4.png">
+            	<img src="img/aco/7.png">
+            	<img src="img/aco/10.png">
+            </div>
+
+            <div class="dream">
+				<img src="img/aco/2.png">
+				<img src="img/aco/5.png">
+				<img src="img/aco/8.png">
+				<img src="img/aco/11.png">
+            </div>
+
+            <div class="dream">
+				<img src="img/aco/3.png">
+				<img src="img/aco/6.png">
+				<img src="img/aco/9.png">
+				<img src="img/aco/12.png">
+            </div>
+        </div>
+  </div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+	<script type="text/javascript">
+		const swiper = new Swiper('.swiper', {
+			autoplay: {
+				delay: 1000,
+				disableOnInteraction: false,
+			},
+
+  			loop: true,
+
+  			pagination: {
+  				el: '.swiper-pagination',
+  				clickable: true,
+  			},
+
+  			navigation: {
+  				nextEl: '.swiper-button-next',
+  				prevEl: '.swiper-button-prev',
+  			},
+  		});
+	</script>
+
+	<script>
+		$(window).on("load",function() {
+			$(".loader-wrapper").fadeOut("slow");
+		});
+	</script>
+</body>
+</html>

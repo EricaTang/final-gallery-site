@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Motion & Station</title>
+	<script src="jquery-3.6.4.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/offbeat.css">
+</head>
+<body>
+	<div class="loader-wrapper">
+		<span class="loader"></span>
+	</div>
+
+	<div class="site-nav">
+		<div class="logo"><a href="index.html">D E 0 3</a></div>
+		<p>「Motion & Station」</p>
+		<div class="about"><a href="main.html">Back.</a></div>	
+	</div>
+
+	<div class="container">
+		<!-- Slider main container -->
+		<div class="swiper">
+ 			<!-- Additional required wrapper -->
+  			<div class="swiper-wrapper">
+    			<!-- Slides -->
+    			<div class="swiper-slide"><img src="img/motion/8.png"></div>
+    			<div class="swiper-slide"><img src="img/motion/22.png"></div>
+    			<div class="swiper-slide"><img src="img/motion/11.png"></div>
+    			<div class="swiper-slide"><img src="img/motion/17.png"></div>
+    			<div class="swiper-slide"><img src="img/motion/5.png"></div>
+  			</div>
+  			<!-- If we need pagination -->
+  			<div class="swiper-pagination"></div>
+
+  			<!-- If we need navigation buttons -->
+  			<div class="swiper-button-prev"></div>
+  			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="description">
+			<p>"Motion & Station" showcases my photographic perspective of art galleries as a space where artworks and viewers coexist in a moment frozen in time.</p>
+			<p>-</p>
+		</div>
+
+		<div class="box">
+            <div class="dream">
+				<img src="img/motion/1.png">
+				<img src="img/motion/4.png">
+				<img src="img/motion/7.png">
+				<img src="img/motion/10.png">
+				<img src="img/motion/13.png">
+				<img src="img/motion/16.png">
+				<img src="img/motion/19.png">
+				<img src="img/motion/22.png">
+            </div>
+
+            <div class="dream">
+				<img src="img/motion/2.png">
+				<img src="img/motion/5.png">
+				<img src="img/motion/8.png">
+				<img src="img/motion/11.png">
+				<img src="img/motion/14.png">
+				<img src="img/motion/17.png">
+				<img src="img/motion/20.png">
+				<img src="img/motion/23.png">
+            </div>
+
+            <div class="dream">
+				<img src="img/motion/3.png">
+				<img src="img/motion/6.png">
+				<img src="img/motion/9.png">
+				<img src="img/motion/12.png">
+				<img src="img/motion/15.png">
+				<img src="img/motion/18.png">
+				<img src="img/motion/21.png">
+				<img src="img/motion/24.png">
+            </div>
+        </div>
+  </div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+	<script type="text/javascript">
+		const swiper = new Swiper('.swiper', {
+			autoplay: {
+				delay: 1000,
+				disableOnInteraction: false,
+			},
+
+  			loop: true,
+
+  			pagination: {
+  				el: '.swiper-pagination',
+  				clickable: true,
+  			},
+
+  			navigation: {
+  				nextEl: '.swiper-button-next',
+  				prevEl: '.swiper-button-prev',
+  			},
+  		});
+	</script>
+
+	<script>
+		$(window).on("load",function() {
+			$(".loader-wrapper").fadeOut("slow");
+		});
+	</script>
+</body>
+</html>
